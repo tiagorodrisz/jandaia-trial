@@ -26,15 +26,21 @@ Early project for learning full-stack development, featuring a Python backend wi
 ```
 backend/
 ├─ app/
+│  ├─ database.py
 │  ├─ main.py
 │  ├─ models.py
-│  ├─ database.py
+│  ├─ schemas.py
 │  ├─ routers/
 │     ├─ clientes.py
 │     └─ licencas.py
 frontend/
-├─ pages/
-│  ├─ clientes.tsx
+├─ src/
+│  ├─ app/
+│     ├─ page.tsx
+│     ├─ clientes/
+│        └─ page.tsx
+│     ├─ licencas/
+│        └─ page.tsx
 e2e/
 ├─ tests/
 │  ├─ licencas.spec.ts
@@ -78,7 +84,7 @@ npm install
 npm run dev
 ```
 
-3. Open `http://localhost:3000/clientes` in your browser.
+3. Open `http://localhost:3000/` in your browser.
 
 ### End-to-End Tests
 
