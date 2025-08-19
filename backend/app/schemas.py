@@ -1,4 +1,5 @@
 from pydantic import BaseModel
+#BaseModel para validação de dados
 
 class ClienteBase(BaseModel):
     nome: str

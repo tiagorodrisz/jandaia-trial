@@ -5,6 +5,7 @@ from .database import Base
 class Cliente(Base):
     __tablename__ = 'clientes'
 
+    #Colunas da tabela, id sendo a chave primária
     id = Column(Integer, primary_key=True, index=True)
     nome = Column(String, index=True)
     cnpj = Column(String, unique=True, index=True, nullable=False)
@@ -18,7 +19,10 @@ class Licenca(Base):
     id = Column(Integer, primary_key=True, index=True)
     tipo = Column(String, nullable=False)
     status = Column(String, nullable=False)
+
+    #Chave estrangeira para referenciar a tabela de clientes
     cliente_id = Column(Integer, ForeignKey('clientes.id'), nullable=False)
 
+    #Relacionamento com a tabela de clientes
     cliente = relationship("Cliente", back_populates="licencas")
 
