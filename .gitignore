@@ -1,0 +1,3 @@
+".venv/" 
+"backend/app.db" 
+"frontend/.env.local" 
